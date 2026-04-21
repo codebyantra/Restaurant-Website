@@ -1,0 +1,226 @@
+/* ================= LOGIN + REGISTER PAGE ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+
+.login-content {
+    min-height: 90vh;
+    margin-top: 60px;
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.25)),
+        url("../images/login-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= CONTAINER ================= */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================= LOGIN / REGISTER BOX ================= */
+
+.login-box {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 45px 40px;
+    border-radius: 500px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    animation: slideUp 0.7s ease;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HEADING ================= */
+
+.login-box h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ================= TEXT CENTER ================= */
+
+.text-center {
+    text-align: center;
+}
+
+/* ================= INPUTS ================= */
+
+.login-box input,
+.login-box textarea {
+    width: 90%;
+    padding: 14px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.4);
+    font-size: 15px;
+    outline: none;
+    margin: 2px auto;
+
+    display: block;
+
+    background: rgba(255,255,255,0.9);
+    color: #000;
+
+    transition: 0.3s;
+}
+
+.login-box textarea {
+    resize: none;
+    height: 50px;
+}
+
+.login-box input:focus,
+.login-box textarea:focus {
+    border-color: #ff7a00;
+    box-shadow: 0 0 0 2px rgba(255,122,0,0.35);
+}
+
+/* ================= BUTTON (FIXED FOREVER) ================= */
+
+.login-box input[type="submit"] {
+    width: 45% !important;
+    margin: 18px auto 0;
+
+    background-color: #e55a00 !important;
+    color: #ffffff !important;
+
+    border: none !important;
+    padding: 14px !important;
+
+    border-radius: 35px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+
+    cursor: pointer !important;
+    transition: 0.3s;
+    display: block;
+}
+
+.login-box input[type="submit"]:hover {
+    background-color: #E0503D !important;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(255,122,0,0.45);
+}
+
+/* ================= LINKS ================= */
+
+.login-box p {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.login-box p a {
+    color: #d44c1b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}
+
+/* ================= SUCCESS & ERROR ================= */
+
+.success {
+    background: #e7ffe7;
+    color: #1a7a1a;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.error {
+    background: #ffe5e5;
+    color: #c40000;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 520px) {
+
+    .login-box {
+        width: 95%;
+        padding: 35px 25px;
+        border-radius: 50px;
+    }
+
+    .login-box h2 {
+        font-size: 24px;
+    }
+
+    .login-box input,
+    .login-box textarea {
+        width: 100%;
+    }
+
+    .login-box input[type="submit"] {
+        width: 65% !important;
+    }
+}
+
+/* ================= REGISTER PAGE COMPACT ================= */
+
+.register-box {
+    width: 600px;
+    padding: 28px 25px;
+    border-radius: 500px;
+}
+
+/* inputs compact */
+.register-box input,
+.register-box textarea {
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 16px;
+    margin: 18px auto;   /* yahin se spacing control */
+    display: block;
+}
+
+/* textarea height */
+.register-box textarea {
+    height: 65px;
+    resize: none;
+}
+
+/* submit button */
+.register-box input[type="submit"] {
+    width: 50%;
+    padding: 11px;
+    margin-top: 10px;
+    font-size: 15px;
+}
